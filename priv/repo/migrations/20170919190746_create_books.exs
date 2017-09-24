@@ -1,0 +1,18 @@
+defmodule Books.Repo.Migrations.CreateBooks do
+  use Ecto.Migration
+
+  def change do
+    create table(:books) do
+      add :title, :string
+      add :author, :string
+      add :code, :integer
+      add :description, :string
+      add :genre, :string
+      add :editorial, :string
+      add :urlimg, :string
+
+      timestamps()
+    end
+
+  end
+end
