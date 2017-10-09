@@ -1,0 +1,59 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= label f, :title, class: "control-label" %>
+    <%= text_input f, :title, class: "form-control" %>
+    <%= error_tag f, :title %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :author, class: "control-label" %>
+    <%= text_input f, :author, class: "form-control" %>
+    <%= error_tag f, :author %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :code, class: "control-label" %>
+    <%= number_input f, :code, class: "form-control" %>
+    <%= error_tag f, :code %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :description, class: "control-label" %>
+    <%= textarea f, :description, class: "form-control" %>
+    <%= error_tag f, :description %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :genre, class: "control-label" %>
+    <%= text_input f, :genre, class: "form-control" %>
+    <%= error_tag f, :genre %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :editorial, class: "control-label" %>
+    <%= text_input f, :editorial, class: "form-control" %>
+    <%= error_tag f, :editorial %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :urlimg, class: "control-label" %>
+    <%= text_input f, :urlimg, class: "form-control" %>
+    <%= error_tag f, :urlimg %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :urlpdf, class: "control-label" %>
+    <%= text_input f, :urlpdf, class: "form-control" %>
+    <%= error_tag f, :urlpdf %>
+  </div>
+
+  <div class="form-group">
+    <%= submit "Submit", class: "btn btn-primary" %>
+  </div>
+<% end %>

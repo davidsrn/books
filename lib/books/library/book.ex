@@ -12,6 +12,7 @@ defmodule Books.Library.Book do
     field :genre, :string
     field :title, :string
     field :urlimg, :string
+    field :urlpdf, :string
 
     timestamps()
   end
@@ -19,7 +20,7 @@ defmodule Books.Library.Book do
   @doc false
   def changeset(%Book{} = book, attrs) do
     book
-    |> cast(attrs, [:title, :author, :code, :description, :genre, :editorial, :urlimg])
-    |> validate_required([:title, :author, :code, :description, :genre, :editorial, :urlimg])
+    |> cast(attrs, [:title, :author, :code, :description, :genre, :editorial, :urlimg, :urlpdf])
+    |> validate_required([:title, :author, :code, :description, :genre, :editorial, :urlimg, :urlpdf])
   end
 end
